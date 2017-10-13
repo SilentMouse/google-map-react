@@ -84,6 +84,8 @@ function fitNwSe(nw, se, width, height) {
   const zoomY = log2(height / GOOGLE_TILE_SIZE / dy);
   const zoom = Math.floor(EPS + Math.min(zoomX, zoomY));
 
+  const zoom = parseInt(zoomX);
+
   // TODO find center just unproject middle world point
   const middle = {
     x: nwWorld.x < seWorld.x // eslint-disable-line
